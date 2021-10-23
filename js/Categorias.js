@@ -96,11 +96,7 @@ function editarCategoria(){
 }
 
 function borrarC(idB){
-    let myData= {
-        id:idB
-    };
 
-    let dataToSend = JSON.stringify(myData);
     let urlMV="http://localhost:8080/api/Category/"+idB;
     $.ajax({
 		url: urlMV,
