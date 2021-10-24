@@ -48,7 +48,7 @@ div{
 }
 
 #reservas:hover, #mensajes:hover,#fincas:hover,#clientes:hover,#categorias:hover{
-    opacity: 0.5;
+    opacity: 0.3;
     box-shadow:  -4px -4px 15px rgb(187, 178, 178),
         0px 0px 0px rgba(0, 0, 0, 0.1);
 }
