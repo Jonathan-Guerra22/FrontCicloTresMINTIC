@@ -36,7 +36,7 @@ function RespuestaClientes(items){
         myTable += "<td>"+items[i].age+"</td>";
         myTable += "<td>"+items[i].messages+"</td>";
         myTable += "<td>"+items[i].reservations+"</td>";
-        myTable += "<td><button class='btn btn-warning' onclick='editarC("+items[i].idClient+")'>Edit</button></td>"
+        myTable += "<td><a href='#idCli'><button class='btn btn-warning' onclick='editarC("+items[i].idClient+")'>Edit</button></td></a>"
         myTable += "<td><button class='btn btn-danger' onclick='borrarC("+items[i].idClient+")'>🗑</button></td>"
         myTable += "</tr>";
     }

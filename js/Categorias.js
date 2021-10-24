@@ -30,7 +30,7 @@ function RespuestaCategorias(items){
         myTable += "<td>"+items[i].id+"</td>";
         myTable += "<td>"+items[i].name+"</td>";
         myTable += "<td>"+items[i].description+"</td>";
-        myTable += "<td><button class='btn btn-warning' onclick='editarC("+items[i].id+")'>Edit</button></td>"
+        myTable += "<td><a href='#idCate'><button class='btn btn-warning' onclick='editarC("+items[i].id+")'>Edit</button></td></a>"
         myTable += "<td><button class='btn btn-danger' onclick='borrarC("+items[i].id+")'>🗑</button></td>"
         myTable += "</tr>";
     }

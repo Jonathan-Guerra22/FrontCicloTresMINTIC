@@ -44,7 +44,7 @@ function RespuestaFincas(items){
         myTable += "<td>"+categoria+"</td>";
         myTable += "<td>"+items[i].messages+"</td>";
         myTable += "<td>"+items[i].reservations+"</td>";
-        myTable += "<td><button class='btn btn-warning' onclick='editarF("+items[i].id+")'>Edit</button></td>"
+        myTable += "<td><a  href='#id'><button class='btn btn-warning' onclick='editarF("+items[i].id+")'>Edit</button></td></a>"
         myTable += "<td><button class='btn btn-danger' onclick='borrarF("+items[i].id+")'>🗑</button></td>"
         myTable += "</tr>";
     }
