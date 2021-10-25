@@ -12,14 +12,14 @@ function verClientes(){
 }
 function RespuestaClientes(items){
     let myTable = "<table class='table table-striped table-bordered border-secondary'>";
-
+    
     if(items.length>0){
+        
         myTable += "<tr class='table-dark'>";
         myTable += "<th>ID</th>";
         myTable += "<th>NAME</th>";
         myTable += "<th>EMAIL</th>";
         myTable += "<th>AGE</th>";
-        myTable += "<th>MESSAGES</th>";
         myTable += "<th>RESERVATIONS</th>";
         myTable += "<th></th>";
         myTable += "<th></th>";
@@ -29,13 +29,20 @@ function RespuestaClientes(items){
     }
     
     for(i=0;i<items.length; i++){
+
+        let reservaciones=[];
+        for (j=0;j<items[i].reservations.length;j++){
+            reservaciones+="<li>"+items[i].reservations[j].idReservation+"<br>";
+            reservaciones+=items[i].reservations[j].startDate+"<br>";
+            reservaciones+=items[i].reservations[j].devolutionDate+"<br>";
+        }
+        
         myTable += "<tr>";
         myTable += "<td>"+items[i].idClient+"</td>";
         myTable += "<td>"+items[i].name+"</td>";
         myTable += "<td>"+items[i].email+"</td>";
         myTable += "<td>"+items[i].age+"</td>";
-        myTable += "<td>"+items[i].messages+"</td>";
-        myTable += "<td>"+items[i].reservations+"</td>";
+        myTable += "<td>"+reservaciones+"</td>";
         myTable += "<td><a href='#idCli'><button class='btn btn-warning' onclick='editarC("+items[i].idClient+")'>Edit</button></td></a>"
         myTable += "<td><button class='btn btn-danger' onclick='borrarC("+items[i].idClient+")'>🗑</button></td>"
         myTable += "</tr>";
