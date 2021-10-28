@@ -22,7 +22,6 @@ function RespuestaFincas(items){
         myTable += "<th>DESCRIPTION</th>";
         myTable += "<th>CATEGORY</th>";
         myTable += "<th>MESSAGES</th>";
-        myTable += "<th>RESERVATIONS</th>";
         myTable += "<th></th>";
         myTable += "<th></th>";
         myTable += "</tr>";
@@ -31,19 +30,12 @@ function RespuestaFincas(items){
     }
     
     for(i=0;i<items.length; i++){
-        let categoria = "<li>"+items[i].category.id+"<br>";
-        categoria += items[i].category.name+"<br>";
-        categoria += items[i].category.description;
+        let categoria = "<li>"+items[i].category.name+"<br>";
+        
 
         let mensajes=[];
         for (j=0;j<items[i].messages.length;j++){
             mensajes+="<li>"+items[i].messages[j].messageText+"<br>";
-        }
-        let reservaciones=[];
-        for (j=0;j<items[i].reservations.length;j++){
-            reservaciones+="<li>"+items[i].reservations[j].idReservation+"<br>";
-            reservaciones+=items[i].reservations[j].startDate+"<br>";
-            reservaciones+=items[i].reservations[j].devolutionDate+"<br>";
         }
 
         myTable += "<tr>";
@@ -54,7 +46,6 @@ function RespuestaFincas(items){
         myTable += "<td>"+items[i].description+"</td>";
         myTable += "<td>"+categoria+"</td>";
         myTable += "<td>"+mensajes+"</td>";
-        myTable += "<td>"+reservaciones+"</td>";
         myTable += "<td><a  href='#id'><button class='btn btn-warning' onclick='editarF("+items[i].id+")'>Edit</button></td></a>"
         myTable += "<td><button class='btn btn-danger' onclick='borrarF("+items[i].id+")'>🗑</button></td>"
         myTable += "</tr>";

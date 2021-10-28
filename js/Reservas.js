@@ -1,5 +1,6 @@
 function verReservas(){
     $.ajax({
+        //132.226.244.108
        url: "http://localhost:8080/api/Reservation/all",
         type: "GET",
         dataType: "json",
